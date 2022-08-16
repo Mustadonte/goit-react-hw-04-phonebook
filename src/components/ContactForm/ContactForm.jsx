@@ -1,5 +1,6 @@
 import useForm from 'components/hooks/useForm';
 import css from './Form.module.css';
+import PropTypes from 'prop-types';
 
 const ContactForm = ({ onSubmit }) => {
   const initialState = {
@@ -45,6 +46,10 @@ const ContactForm = ({ onSubmit }) => {
       </button>
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default ContactForm;
